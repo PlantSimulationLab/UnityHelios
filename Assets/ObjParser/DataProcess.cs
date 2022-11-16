@@ -29,6 +29,9 @@ public static class DataProcess
         List<float> dat = new List<float>();
         float maxDat_val = 0;
         
+
+
+
         while (!streamReader.EndOfStream)
         {
             var line = streamReader.ReadLine();

@@ -20,7 +20,7 @@ namespace Obj
             if (material == null) material = Resources.Load<Material>("ObjDefaulOpaque");
             if (transparentMaterial == null) transparentMaterial = Resources.Load<Material>("ObjDefaulTransparent");
 
-            //path = ProcessPath(path);
+            path = ProcessPath(path);
 
             var streamReader = GetStreamReader(path);
             if (streamReader == null) return null;
@@ -35,6 +35,7 @@ namespace Obj
             DataProcess.datList.Clear();
             
             string[] datFiles = Directory.GetFiles(Path.Combine(Path.GetDirectoryName(path)), "*.dat");
+
             if (datFiles.Length > 0)
             {
                 for (int i = 0; i < datFiles.Length; i++)

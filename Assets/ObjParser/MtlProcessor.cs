@@ -154,14 +154,14 @@ namespace Obj
                     tex = texturesCache[texturePath];
             }
             
-            int Locacation = directoryName.IndexOf("Helios");
+            //int Locacation = directoryName.IndexOf("Helios");
 
-            string strDirName = directoryName.Substring(0, Locacation);
-            strDirName += "Helios\\";
+            //string strDirName = directoryName.Substring(0, Locacation);
+            //strDirName += "Helios\\";
             if (tex == null)
             {
                 tex = new Texture2D(4, 4);
-                tex.LoadImage(File.ReadAllBytes(Path.Combine(strDirName, texturePath)));
+                tex.LoadImage(File.ReadAllBytes(Path.Combine(directoryName, texturePath)));
 
                 lock (texturesCache)
                 {
