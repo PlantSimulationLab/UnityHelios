@@ -231,6 +231,7 @@ namespace Pcx
             }
             catch (Exception e)
             {
+                Debug.Log(e);
                 Debug.LogError("Failed importing " + paths[0] + ". " + e.Message);
                 return null;
             }

@@ -38,6 +38,7 @@ public class Executable : MonoBehaviour {
     [SerializeField] private GameObject range;
     [SerializeField] private RawImage gradient;
     [SerializeField] private Slider pointSize;
+    [SerializeField] private GameObject modeSwitchPanel;
 
     private PointCloudRenderer pclRenderer;
     private string activeModel;
@@ -87,6 +88,7 @@ public class Executable : MonoBehaviour {
         float scale = float.Parse(scaleInputField.text, CultureInfo.InvariantCulture);
         quit.gameObject.SetActive(true);
         menu.gameObject.SetActive(true);
+        modeSwitchPanel.SetActive(true);
         axisSlider.gameObject.SetActive(true);
         
         if (extension == ".obj")
