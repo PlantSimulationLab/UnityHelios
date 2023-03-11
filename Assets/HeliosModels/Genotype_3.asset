@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Genotype_3
   m_EditorClassIdentifier: 
   RootFolderPath: HeliosModels/Genotype_3
-  OBJFileName: plant_genotype1.obj
+  OBJFileName: plant_genotype3.obj
   WUEDatFileName: transpiration.dat
   PSynthFileName: net_photosynthesis.dat
   LEstFileName: radiation_flux_SW.dat
