@@ -1,0 +1,4 @@
+newmtl material0
+map_Kd GrapeLeaf.png
+map_d GrapeLeaf.png
+illum 2 

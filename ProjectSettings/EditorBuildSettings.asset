@@ -5,9 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Executable.unity
     guid: cadde5204c408e04f8bbe56eb16e58d9
+  - enabled: 1
+    path: Assets/Scenes/PicnicDay.unity
+    guid: 1bc76b32ed6eb99488961e32132c19a4
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: e1132834332e58b4eaf69da0ee867244, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 7d5b7ada3e406fa42bf93506e083f9e2, type: 2}

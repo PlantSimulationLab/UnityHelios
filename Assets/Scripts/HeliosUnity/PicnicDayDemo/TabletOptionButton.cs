@@ -8,6 +8,7 @@ namespace HeliosUnity.PicnicDayDemo
     public enum TabletOption
     {
         NONE = -1,
+        RGB = 0, // rgb channel
         WUE = 1, // water use efficieny
         PSYNTH = 2, // photosynthesis
         LEST = 3 // light estimation
