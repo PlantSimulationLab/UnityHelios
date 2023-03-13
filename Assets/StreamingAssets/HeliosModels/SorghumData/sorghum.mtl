@@ -1,0 +1,29 @@
+newmtl material1
+Ka 0.302 0.4314 0.2392
+Kd 0.302 0.4314 0.2392
+Ks 0.0 0.0 0.0
+illum 2 
+newmtl material2
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+illum 2 
+map_Ka obj_textures/s5_Sorghum_seed.png
+map_Kd obj_textures/s5_Sorghum_seed.png
+map_d obj_textures/s5_Sorghum_seed.png
+newmtl material3
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+illum 2 
+map_Ka obj_textures/s5_Sorghum_leaf.png
+map_Kd obj_textures/s5_Sorghum_leaf.png
+map_d obj_textures/s5_Sorghum_leaf.png
+newmtl material4
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+illum 2 
+map_Ka obj_textures/dirt.jpg
+map_Kd obj_textures/dirt.jpg
+map_d obj_textures/dirt.jpg

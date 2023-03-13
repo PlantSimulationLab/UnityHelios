@@ -168,10 +168,55 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HeliosModels:
-  - {fileID: 11400000, guid: 7475de1465d2f544d8d8f0da32e38a92, type: 2}
   - {fileID: 11400000, guid: e5fe5f448a8cb9345bebb1bcdbcdfb2e, type: 2}
   - {fileID: 11400000, guid: a05f2ba756926e64c9524e18e777817c, type: 2}
   - {fileID: 11400000, guid: 6dc1e457e22ac254ca415d03b0c0b624, type: 2}
+--- !u!1 &175639696
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 175639697}
+  - component: {fileID: 175639698}
+  m_Layer: 0
+  m_Name: HeliosModelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &175639697
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175639696}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.72273576, y: 0.14600003, z: -0.60444224}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &175639698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175639696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48534d8815081954ebc13563d8737282, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PrintTrace: 1
+  heliosModelPrefab: {fileID: 9153966247239265432, guid: a1764a3cd3475754b9fd56170b5f818c, type: 3}
 --- !u!1 &337232766
 GameObject:
   m_ObjectHideFlags: 0
