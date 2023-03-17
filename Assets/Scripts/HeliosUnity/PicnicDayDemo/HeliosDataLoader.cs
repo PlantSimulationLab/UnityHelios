@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-
 namespace HeliosUnity.PicnicDayDemo
 {
 
@@ -28,15 +27,26 @@ namespace HeliosUnity.PicnicDayDemo
 
             StreamReader reader = new StreamReader(dataFilePath);
 
+            return Load(reader, dataType);
+
+        }
+
+        public static HeliosData LoadFromResource(string dataResourcePath, HeliosDataType dataType)
+        {
             var data = new List<float>();
             float maxDataValue = 0;
 
-            while (!reader.EndOfStream)
+            var dataTextAsset = Resources.Load<TextAsset>(dataResourcePath);
+            var dataList = Utilities.Resources.TextAssetToList(dataTextAsset);
+
+            for(int i=0; i<dataList.Count; i++)
             {
 
-
-                var line = reader.ReadLine();
-                var dataValue = float.Parse(line);
+                float dataValue;
+                if (!float.TryParse(dataList[i], out dataValue))
+                    dataValue = 0.0f;
+                else
+                    dataValue = float.Parse(dataList[i]); ;
 
                 if (dataValue > maxDataValue)
                 {
@@ -47,23 +57,54 @@ namespace HeliosUnity.PicnicDayDemo
             }
 
             var normalizedData = NormalizeData(data, maxDataValue);
-            var rescaledData = RescaleData(normalizedData);
-            var heliosData = new HeliosData(data, rescaledData, maxDataValue);
+            var heliosData = new HeliosData(data, normalizedData, maxDataValue);
             heliosData.SetDataType(dataType);
-            return heliosData;
 
+            return heliosData;
         }
+
 
         public static List<float> NormalizeData(List<float> data, float maxDataValue)
         {
             var normalizedData = new List<float>(data.Count);
 
-
-
             for (int i = 0; i < data.Count; i++)
-                normalizedData.Add(data[i] / maxDataValue);
+            {
+                var normalizedValue = data[i] == 0 ? 0 : data[i] / maxDataValue;
+                normalizedData.Add(normalizedValue);
+            }
 
             return normalizedData;
+        }
+
+        public static HeliosData Load(StreamReader reader, HeliosDataType dataType)
+        {
+            var data = new List<float>();
+            float maxDataValue = 0;
+
+            while (!reader.EndOfStream)
+            {
+
+                var line = reader.ReadLine();
+                float dataValue;
+                if (!float.TryParse(line, out dataValue))
+                    dataValue = 0.0f;
+                else
+                    dataValue = float.Parse(line); ;
+
+                if (dataValue > maxDataValue)
+                {
+                    maxDataValue = dataValue;
+                }
+
+                data.Add(dataValue);
+            }
+
+            var normalizedData = NormalizeData(data, maxDataValue);
+            //var rescaledData = RescaleData(normalizedData);
+            var heliosData = new HeliosData(data, normalizedData, maxDataValue);
+            heliosData.SetDataType(dataType);
+            return heliosData;
         }
 
         public static List<float> RescaleData(List<float> data)

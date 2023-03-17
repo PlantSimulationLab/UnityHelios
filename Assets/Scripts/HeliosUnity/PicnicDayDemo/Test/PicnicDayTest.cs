@@ -21,9 +21,7 @@ namespace HeliosUnity.PicnicDayDemo.Test
         // Start is called before the first frame update
         void Start()
         {
-            var heliosObject = HeliosModelManager.Instance.LoadModel(HeliosModels[1], Vector3.zero, Quaternion.identity);
-
-            heliosObject.ApplyData(HeliosDataType.PSYNTH);
+    
         }
 
         // Update is called once per frame

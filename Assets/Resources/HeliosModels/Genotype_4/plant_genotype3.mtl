@@ -1,0 +1,9 @@
+newmtl material0
+map_Kd BeanLeaf.png
+map_d BeanLeaf.png
+illum 2 
+newmtl material1
+Ka 0.6471 0.7333 0.1176
+Kd 0.6471 0.7333 0.1176
+Ks 0.0 0.0 0.0
+illum 2 

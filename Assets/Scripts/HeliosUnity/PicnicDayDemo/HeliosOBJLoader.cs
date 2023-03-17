@@ -18,6 +18,17 @@ namespace HeliosUnity.PicnicDayDemo
 
             var loadedObject = loader.Load(objFilePath);
 
+            loadedObject.transform.Rotate(new Vector3(-90f, 0, 0));
+
+            return loadedObject;
+        }
+
+        public static GameObject Load(Stream stream)
+        {
+            var loadedObject = loader.Load(stream);
+
+            loadedObject.transform.Rotate(new Vector3(-90f, 0, 0));
+
             return loadedObject;
         }
     }

@@ -8,10 +8,17 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Executable.unity
     guid: cadde5204c408e04f8bbe56eb16e58d9
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PicnicDay.unity
     guid: 1bc76b32ed6eb99488961e32132c19a4
+  - enabled: 0
+    path: Assets/Scenes/PicnicDayTest.unity
+    guid: c9efc0b020217ba4da4b5b71ede98bd6
+  - enabled: 1
+    path: Assets/Scenes/PicnicDayTestPreload.unity
+    guid: 779a94415b3539046b2081e74fbe11d2
   m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 37bd9a32b4a443c48a86acd6beec0535, type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: e1132834332e58b4eaf69da0ee867244, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 7d5b7ada3e406fa42bf93506e083f9e2, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 936baa465e3ca634d9b21a6536d6b12b, type: 2}
